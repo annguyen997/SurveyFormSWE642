@@ -12,7 +12,7 @@ import { StddetailsComponent } from './stddetails/stddetails.component';
 
 const appRoutes: Routes = [
   {path:'stdDetail/:id',component: StddetailsComponent},
-  {path:'survey',component: StudentComponent}
+  {path:'surveyform',component: StudentComponent}
 ]
 
 @NgModule({
