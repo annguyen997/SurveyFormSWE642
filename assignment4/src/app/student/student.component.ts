@@ -54,13 +54,13 @@ export class StudentComponent implements OnInit {
     });
     console.log("get students"+this.myService.getStudents());
 
-    /*this.myService.getStudents().subscribe(
+    /* this.myService.getStudents().subscribe(
       response =>this.handleSuccessfulResponse(response),
      ); */
   }
-  /* handleSuccessfulResponse(response)
+  /* handleSuccessfulResponse(response : any)
   {
-      this.students=response;
+      this.students = response;
       console.log("student ids retrieving "+this.students);
   } */
 
@@ -97,29 +97,29 @@ export class StudentComponent implements OnInit {
   console.log("radio"+this.scheduleForm.value.intrestinuni);
   console.log("likeliness"+this.scheduleForm.value.recos)
 
-  /* this.studentDetails = {
-    STDID : this.scheduleForm.value.stdid,
-    USERNAME : this.scheduleForm.value.username,
-    STREET : this.scheduleForm.value.street,
-    CITY : this.scheduleForm.value.city,
-    STATE : this.scheduleForm.value.state,
-    ZIP : this.scheduleForm.value.zip,
-    TELEPHONE : this.scheduleForm.value.telephone,
-    EMAIL : this.scheduleForm.value.mail,
-    URL : this.scheduleForm.value.websiteaddress,
-    INTINUNI : this.scheduleForm.value.intrestinuni,
-    stddate : this.scheduleForm.get("sdate").value,
-    HIGHSCHLGRADMONTH : this.scheduleForm.value.highschlgradmonth,
-    HIGHSCHLGRADYEAR : this.scheduleForm.value.highschlgradyear,
-    RECOS : this.scheduleForm.value.recos,
-    stddata : this.scheduleForm.get("raffle").value
+  this.studentDetails = {
+    stdid : this.scheduleForm.value.stdid,
+    username : this.scheduleForm.value.username,
+    street : this.scheduleForm.value.street,
+    city : this.scheduleForm.value.city,
+    state : this.scheduleForm.value.state,
+    zip : this.scheduleForm.value.zip,
+    telephone : this.scheduleForm.value.telephone,
+    email : this.scheduleForm.value.mail,
+    url : this.scheduleForm.value.websiteaddress,
+    intinuni : this.scheduleForm.value.intrestinuni,
+    stddate : this.scheduleForm.value.sdate,
+    highschlgradmonth : this.scheduleForm.value.highschlgradmonth,
+    highschlgradyear : this.scheduleForm.value.highschlgradyear,
+    recos : this.scheduleForm.value.recos,
+    comments : this.scheduleForm.value.comments,
+    data : this.scheduleForm.value.data
   } 
   console.log(this.studentDetails);
   this.myService.setStudent(this.studentDetails);
   this.myService.setStudent(this.studentDetails).subscribe(
   response => alert("student added successfully")
   );
-  */
 
   }
   onSubmit(): void {

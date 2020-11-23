@@ -11,7 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { StddetailsComponent } from './stddetails/stddetails.component';
 
 const appRoutes: Routes = [
-  {path:'stdDetail/:id',component:StddetailsComponent}
+  {path:'stdDetail/:id',component: StddetailsComponent},
+  {path:'survey',component: StudentComponent}
 ]
 
 @NgModule({
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes,{enableTracing:true})
   ],
   providers: [],
   bootstrap: [AppComponent]

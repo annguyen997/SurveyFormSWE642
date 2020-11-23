@@ -27,10 +27,10 @@ export class StddetailsComponent implements OnInit {
     console.log(this.stdDet); */
   }
 
-  /* handleSuccessfulResponse(response)
+  handleSuccessfulResponse(response : any)
   {
       this.studentDetails=response;
       console.log("student details from database using id retrieving is "+this.studentDetails);
-  } */
+  }
 
 }

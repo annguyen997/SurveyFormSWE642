@@ -4,20 +4,21 @@ import { HttpClient } from '@angular/common/http';
 export class Student{
   constructor(
     public stdid:string,
-    public stdname:string,
-    public stdadd:string,
-    public stdcity:string,
-    public stdstate:string,
-    public stdzip:string,
+    public username:string,
+    public street:string,
+    public city:string,
+    public state:string,
+    public zip:string,
+    public telephone:string,
+    public email:string,
+    public url:string,
+    public intinuni:string,
     public stddate:string,
-    public stdtel:string,
-    public stdemail:string,
-    public stdurl:string,
-    public stdmonth:string,
-    public stdyear:string,
-    public stdradio:string,
-    public stdlike:string,
-    public stddata:string,
+    public highschlgradmonth:string,
+    public highschlgradyear:string,
+    public recos:string,
+    public comments:string,
+    public data:string
   ) {}
 }
 
@@ -25,23 +26,23 @@ export class Student{
   providedIn: 'root'
 })
 export class StudentServiceService {
-  //private usersUrl: string;
+  private usersUrl: string;
   private studentList:Array<String>=[];
   private std:Array<Student>=[];
-  //private stdDetail:Student;
+  private stdDetail:Student;
 
   constructor(private http:HttpClient) { }
 
-  /* getStdDetail(stdid: string){
+  getStdDetail(stdid: string){
     return this.http.get<Student>('http://localhost:8080/students'+'/'+stdid)
-  } */
+  }
  
   getStudents()
   {
     return this.http.get<Student[]>('http://localhost:8080/students');
   }
 
-  /* setStudent(student: any){
+  setStudent(student: any){
      return this.http.post('http://localhost:8080/students', student);
-  } */
+  }
 }
