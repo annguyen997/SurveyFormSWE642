@@ -60,8 +60,8 @@ textarea {
     box-shadow: 0 0 10px #FFCC33
 }
 .cs-check,.cs-radio {
-    width:24px;
-    height:24px;
+    width:18px;
+    height:18px;
     position:relative;
     top:6px
 }

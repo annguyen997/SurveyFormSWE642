@@ -4,7 +4,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { StudentServiceService, Student } from '../student-service.service';
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-student',
@@ -32,16 +32,44 @@ export class StudentComponent implements OnInit {
 
   constructor(private http:HttpClient,private myService:StudentServiceService, private fb: FormBuilder) { }
 
+  get username(): FormControl {
+    return this.scheduleForm.get('username') as FormControl;
+  }
+  get stdid(): FormControl {
+    return this.scheduleForm.get('stdid') as FormControl;
+  }
+  get street(): FormControl {
+    return this.scheduleForm.get('street') as FormControl;
+  }
+  get city(): FormControl {
+    return this.scheduleForm.get('city') as FormControl;
+  }
+  get state(): FormControl {
+    return this.scheduleForm.get('state') as FormControl;
+  }
+  get zip(): FormControl {
+    return this.scheduleForm.get('zip') as FormControl;
+  }
+  get telephone(): FormControl {
+    return this.scheduleForm.get('telephone') as FormControl;
+  }
+  get mail(): FormControl {
+    return this.scheduleForm.get('mail') as FormControl;
+  }
+  get datad(): FormControl {
+    return this.scheduleForm.get('data') as FormControl;
+  }
+
   ngOnInit(): void {
     this.scheduleForm = this.fb.group({
-      username: ['', Validators.required],
+      username: ['', [Validators.required, Validators.pattern('[A-Za-z ]*')]],
       stdid: ['', Validators.required],
-      street: ['', Validators.required],
+      street: ['', [Validators.required, Validators.pattern('[A-Za-z0-9 ]*')]],
       city: ['', Validators.required],
       state:  ['', Validators.required],
-      zip: ['', Validators.required],
-      telephone:  ['', Validators.required],
-      mail:  ['', Validators.required],
+      zip: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+      telephone:  ['', [Validators.required, Validators.pattern('[0-9]{3}-[0-9]{3}-[0-9]{4}')]],
+      mail:  ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}')]],
       websiteaddress:  ['', Validators.required],
       sdate:['',Validators.required],
       highschlgradmonth:[],
@@ -49,9 +77,9 @@ export class StudentComponent implements OnInit {
       intrestinuni:[],
       additionalcomments: [],
       recos:[],
-      data:[],
+      data:['',Validators.required],
 
-    });
+    },{ updateOn: 'blur' });
     console.log("get students"+this.myService.getStudents());
 
     /* this.myService.getStudents().subscribe(
