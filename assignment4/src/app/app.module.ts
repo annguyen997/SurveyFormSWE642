@@ -11,8 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { StddetailsComponent } from './stddetails/stddetails.component';
 
 const appRoutes: Routes = [
-  {path:'stdDetail/:id',component: StddetailsComponent},
-  {path:'surveyform',component: StudentComponent}
+  {path:'stdDetail/:id',component: StddetailsComponent}
 ]
 
 @NgModule({
