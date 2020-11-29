@@ -75,6 +75,7 @@ export class StudentComponent implements OnInit {
       highschlgradmonth:[],
       highschlgradyear:[],
       intrestinuni:[],
+      likedabtcampus:[],
       additionalcomments: [],
       recos:[],
       data:['',Validators.required],
@@ -82,15 +83,15 @@ export class StudentComponent implements OnInit {
     },{ updateOn: 'blur' });
     console.log("get students"+this.myService.getStudents());
 
-    /* this.myService.getStudents().subscribe(
+    this.myService.getStudents().subscribe(
       response =>this.handleSuccessfulResponse(response),
-     ); */
+     ); 
   }
-  /* handleSuccessfulResponse(response : any)
+  handleSuccessfulResponse(response : any)
   {
       this.students = response;
       console.log("student ids retrieving "+this.students);
-  } */
+  }
 
   submit():void {
     this.showSuccess = false;
@@ -123,7 +124,7 @@ export class StudentComponent implements OnInit {
     }
 
   console.log("radio"+this.scheduleForm.value.intrestinuni);
-  console.log("likeliness"+this.scheduleForm.value.recos)
+  console.log("likeliness"+this.scheduleForm.value.recos);
 
   this.studentDetails = {
     stdid : this.scheduleForm.value.stdid,
@@ -135,6 +136,7 @@ export class StudentComponent implements OnInit {
     telephone : this.scheduleForm.value.telephone,
     email : this.scheduleForm.value.mail,
     url : this.scheduleForm.value.websiteaddress,
+    likedabtcampus : this.scheduleForm.value.likedabtcampus,
     intinuni : this.scheduleForm.value.intrestinuni,
     stddate : this.scheduleForm.value.sdate,
     highschlgradmonth : this.scheduleForm.value.highschlgradmonth,

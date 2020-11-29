@@ -1,4 +1,4 @@
-export class Student {
-    id:String;
-    name:String;
+export interface Student {
+    stdid:string;
+    username:String;
 }

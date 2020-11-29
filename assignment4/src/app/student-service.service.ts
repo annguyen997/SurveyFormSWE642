@@ -13,6 +13,7 @@ export class Student{
     public email:string,
     public url:string,
     public intinuni:string,
+    public likedabtcampus:string,
     public stddate:string,
     public highschlgradmonth:string,
     public highschlgradyear:string,

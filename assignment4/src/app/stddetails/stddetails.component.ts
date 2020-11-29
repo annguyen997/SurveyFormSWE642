@@ -14,17 +14,19 @@ import { ActivatedRoute } from '@angular/router';
 export class StddetailsComponent implements OnInit {
 
   stdDet:Student;
-  stdid:String;
+  stdid:string;
   studentDetails:string[];
   constructor(private myService:StudentServiceService,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    /* this.stdid = this.route.snapshot.paramMap.get('id');
+    this.stdid = this.route.snapshot.paramMap.get('id');
     console.log("id selected is "+this.stdid);
     this.myService.getStdDetail(this.stdid).subscribe(
-      response=>this.handleSuccessfulResponse(response),
+      response=>{
+        return this.handleSuccessfulResponse(response);
+      }, 
     );
-    console.log(this.stdDet); */
+    console.log(this.stdDet);
   }
 
   handleSuccessfulResponse(response : any)
