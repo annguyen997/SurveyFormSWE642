@@ -43,6 +43,7 @@ export class StudentServiceService {
   }
 
   setStudent(student: any){
-     return this.http.post('http://localhost:8080/students', student);
+    const headers = {"Access-Control-Allow-Origin":"*"}
+     return this.http.post('http://localhost:8080/students', student, {headers});
   }
 }
