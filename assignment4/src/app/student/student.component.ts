@@ -3,7 +3,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { StudentServiceService, Student } from '../student-service.service';
+import { StudentServiceService } from '../student-service.service';
+import { Student } from '../student.model';
 import { FormBuilder, FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({

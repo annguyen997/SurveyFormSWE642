@@ -1,66 +1,67 @@
 <!-- AUTHOR: Nupur Shah
     Student details page
 -->
-<table class="cs-container cs-table cs-content">
+<p *ngIf="student==null">Loading...</p>
+<table class="cs-container cs-table cs-content" *ngIf="student!=null">
     <caption class="cs-container cap-heading">Student Survey Records</caption>
     <tr>
         <td>Student ID</td>
-        <!-- <td>{{studentDetails.stdid}}</td> -->
+        <td>{{this?.student?.stdid}}</td>
     </tr>
     <tr>
         <td>Name</td>
-        <!-- <td>{{studentDetails.username}}</td> -->
+        <td>{{this?.student?.username}}</td>
     </tr>
     <tr>
         <td>Street Address</td>
-        <!-- <td>{{studentDetails.street}}</td> -->
+        <td>{{this?.student?.street}}</td>
     </tr>
     <tr>
         <td>City</td>
-        <!-- <td>{{studentDetails.city}}</td> -->
+        <td>{{this?.student?.city}}</td>
     </tr>
     <tr>
         <td>State</td>
-        <!-- <td>{{studentDetails.state}}</td> -->
+        <td>{{this?.student?.state}}</td>
     </tr>
     <tr>
         <td>Zip</td>
-        <!-- <td>{{studentDetails.zip}}</td> -->
+        <td>{{this?.student?.zip}}</td>
     </tr>
     <tr>
         <td>Telephone</td>
-        <!-- <td>{{studentDetails.telephone}}</td> -->
+        <td>{{this?.student?.telephone}}</td>
     </tr>
     <tr>
         <td>Email</td>
-        <!-- <td>{{studentDetails.email}}</td> -->
+        <td>{{this?.student?.email}}</td>
     </tr>
     <tr>
         <td>URL</td>
-        <!-- <td>{{studentDetails.url}}</td> -->
+        <td>{{this?.student?.url}}</td>
     </tr>		
     <tr>
         <td>Interested in the university because</td>
-        <!-- <td>{{studentDetails.intinuni}}</td> -->
+        <td>{{this?.student?.intinuni}}</td>
     </tr>
     <tr>
         <td>Liked about campus</td>
-        <!-- <td>{{studentDetails.likedabtcampus}}</td> -->
+        <td>{{this?.student?.likedabtcampus}}</td>
     </tr>
     <tr>
         <td>Survey Date</td>
-        <!-- <td>{{studentDetails.sdate}}</td> -->
+        <td>{{this?.student?.stddate}}</td>
     </tr>
     <tr>
         <td>Additional Comments</td>
-        <!-- <td>{{studentDetails.comments}}</td> -->
+        <td>{{this?.student?.comments}}</td>
     </tr>
     <tr>
         <td>High-school graduation month-year</td>
-        <!-- <td>{{studentDetails.highschlgradmonth}} - {{studentDetails.highschlgradyear}}</td> -->
+        <td>{{this?.student?.highschlgradmonth}} - {{this?.student?.highschlgradyear}}</td>
     </tr>
     <tr>
         <td>Recommending this school to other students</td>
-        <!-- <td>{{studentDetails.recos}}</td> -->
+        <td>{{this?.student?.recos}}</td>
     </tr>
 </table>

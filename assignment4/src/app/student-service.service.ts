@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Student } from './student.model';
 
-export class Student{
+/* export class Student{
   constructor(
     public stdid:string,
     public username:string,
@@ -21,7 +22,7 @@ export class Student{
     public comments:string,
     public data:string
   ) {}
-}
+} */
 
 @Injectable({
   providedIn: 'root'
@@ -34,16 +35,16 @@ export class StudentServiceService {
 
   constructor(private http:HttpClient) { }
 
-  getStdDetail(stdid: string){
-    return this.http.get<Student>('http://localhost:8080/students'+'/'+stdid)
+  getStdDetail(stdid: any){
+    return this.http.get<Student>('http://localhost:8080/students'+'/'+stdid, {withCredentials: true})
   }
  
   getStudents()
   {
-    return this.http.get<Student[]>('http://localhost:8080/students');
+    return this.http.get<Student[]>('http://localhost:8080/students', {withCredentials: true});
   }
 
-  setStudent(student: any){
-     return this.http.post('http://localhost:8080/students', student);
+  setStudent(student: Student){
+     return this.http.post('http://localhost:8080/students', student, {withCredentials: true});
   }
 }
