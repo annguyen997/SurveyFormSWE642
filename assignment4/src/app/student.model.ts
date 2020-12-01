@@ -11,11 +11,11 @@ export class Student{
       public url:string,
       public intinuni:string,
       public likedabtcampus:string,
-      public stddate:string,
+      public sdate:string,
       public highschlgradmonth:string,
       public highschlgradyear:string,
       public recos:string,
-      public comments:string,
+      public additionalcomments:string,
       public data:string
     ) {}
   }

@@ -94,22 +94,22 @@
     
         <!-- Visitor Liked the most about campus -->
         <p>Liked most about the campus:<br/>
-            <input class="cs-check" type="checkbox" name="likedabtcampus" id="students" value="Students" />&nbsp;
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="students" value="Students" (change)="onCheckboxChange($event, 'Students')"/>&nbsp;
             <label for="students">Students</label>&nbsp;
 			
-            <input class="cs-check" type="checkbox" name="likedabtcampus" id="location" value="Location" />&nbsp;
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="location" value="Location" (change)="onCheckboxChange($event, 'Location')"/>&nbsp;
             <label for="location">Location</label>&nbsp;
 			
-            <input class="cs-check" type="checkbox" name="likedabtcampus" id="campus" value="Campus" />&nbsp;
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="campus" value="Campus" (change)="onCheckboxChange($event, 'Campus')"/>&nbsp;
             <label for="campus">Campus</label>&nbsp;
 			
-            <input class="cs-check" type="checkbox" name="likedabtcampus" id="atmosphere" value="Atmosphere" />&nbsp;
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="atmosphere" value="Atmosphere" (change)="onCheckboxChange($event, 'Atmosphere')"/>&nbsp;
             <label for="atmosphere">Atmosphere</label>&nbsp;
 			
-            <input class="cs-check" type="checkbox" name="likedabtcampus" id="dormrooms" value="Dorm rooms" />&nbsp;
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="dormrooms" value="Dorm rooms" (change)="onCheckboxChange($event, 'Dorm rooms')"/>&nbsp;
             <label for="dormrooms">Dorm rooms</label>&nbsp;
 			
-            <input class="cs-check" type="checkbox" name="likedabtcampus" id="sports" value="Sports" />&nbsp;
+            <input class="cs-check" type="checkbox" name="likedabtcampus" id="sports" value="Sports" (change)="onCheckboxChange($event, 'Sports')"/>&nbsp;
             <label for="sports">Sports</label> 
         </p>
 

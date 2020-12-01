@@ -16,6 +16,7 @@ export class StudentComponent implements OnInit {
 
   students: string[]=[];
   student = '';
+  likedabtcampus: String[] = [];
   numeric: number=0;
   mean:number=0;
   sum : number=0;
@@ -93,6 +94,20 @@ export class StudentComponent implements OnInit {
       this.students = response;
       console.log("student ids retrieving "+this.students);
   }
+  onCheckboxChange(event : any, value : any) {
+    if (!event.target.checked) {
+
+      let index = this.likedabtcampus.indexOf(value);
+
+      if (index > -1) {
+
+        this.likedabtcampus.splice(index, 1);
+      }
+    }
+    else {
+      this.likedabtcampus.push(value);
+    }
+  }
 
   submit():void {
     this.showSuccess = false;
@@ -137,13 +152,13 @@ export class StudentComponent implements OnInit {
     telephone : this.scheduleForm.value.telephone,
     email : this.scheduleForm.value.mail,
     url : this.scheduleForm.value.websiteaddress,
-    likedabtcampus : this.scheduleForm.value.likedabtcampus,
+    likedabtcampus : this.likedabtcampus.join(),
     intinuni : this.scheduleForm.value.intrestinuni,
-    stddate : this.scheduleForm.value.sdate,
+    sdate : this.scheduleForm.value.sdate,
     highschlgradmonth : this.scheduleForm.value.highschlgradmonth,
     highschlgradyear : this.scheduleForm.value.highschlgradyear,
     recos : this.scheduleForm.value.recos,
-    comments : this.scheduleForm.value.comments,
+    additionalcomments : this.scheduleForm.value.additionalcomments,
     data : this.scheduleForm.value.data
   } 
   console.log(this.studentDetails);
