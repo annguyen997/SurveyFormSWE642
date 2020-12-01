@@ -12,7 +12,7 @@ public class Student {
 
     @Id
     @Column(name = "STDID")
-    private String stdid; // student ID
+    private String stdId; // student ID
 
     @Column (name = "USERNAME")
     private String username;
@@ -27,7 +27,7 @@ public class Student {
     private String state;
 
     @Column (name = "ZIP")
-    private String zipCode;
+    private String zip;
 
     @Column (name = "TELEPHONE")
     private String telephone;
@@ -39,26 +39,26 @@ public class Student {
     private String url;
 
     @Column (name = "sdate")
-    private Date surveyDate;
+    private Date sdate;
 
     @Column (name = "LIKEDABTCAMPUS")
-    private String likedAbtCampus;  	//Liked About Campus - Checkboxes
+    private String likedabtcampus;  	//Liked About Campus - Checkboxes
     //There may be multiple options - need to split that.
 
     @Column (name = "INTINUNI")
-    private String intinUni; 			//Interested Options - Radio Buttons
+    private String intinuni; 			//Interested Options - Radio Buttons
 
     @Column (name = "HIGHSCHLGRADMONTH")
-    private String highSchlGradMonth;
+    private String highschlgradmonth;
 
     @Column (name = "HIGHSCHLGRADYEAR")
-    private String highSchlGradYear;
+    private String highschlgradyear;
 
     @Column (name = "RECOS")
     private String recos; 				//Recommend this school to other students
 
     @Column (name = "COMMENTS")
-    private String comments; 			//Student comments
+    private String additionalcomments; 			//Student comments
 
     @Column (name = "DATA")
     private String data; 				//List of integers
@@ -69,11 +69,11 @@ public class Student {
     }
 
     public String getStdId() {
-        return stdid;
+        return stdId;
     }
 
-    public void setStdId(String stdid) {
-        this.stdid = stdid;
+    public void setStdId(String stdId) {
+        this.stdId = stdId;
     }
 
     public String getUsername() {
@@ -100,6 +100,22 @@ public class Student {
         this.city = city;
     }
 
+    public Date getSdate() {
+        return sdate;
+    }
+
+    public void setSdate(Date sdate) {
+        this.sdate = sdate;
+    }
+
+    public String getAdditionalcomments() {
+        return additionalcomments;
+    }
+
+    public void setAdditionalcomments(String additionalcomments) {
+        this.additionalcomments = additionalcomments;
+    }
+
     public String getState() {
         return state;
     }
@@ -108,12 +124,12 @@ public class Student {
         this.state = state;
     }
 
-    public String getZipCode() {
-        return zipCode;
+    public String getZip() {
+        return zip;
     }
 
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 
     public String getTelephone() {
@@ -140,44 +156,38 @@ public class Student {
         this.url = url;
     }
 
-    public Date getSurveyDate() {
-        return surveyDate;
+
+
+    public String getLikedabtcampus() {
+        return likedabtcampus;
     }
 
-    public void setSurveyDate(Date surveyDate) {
-        this.surveyDate = surveyDate;
+    public void setLikedabtcampus(String likedabtcampus) {
+        this.likedabtcampus = likedabtcampus;
     }
 
-    public String getLikedAbtCampus() {
-        return likedAbtCampus;
+    public String getIntinuni() {
+        return intinuni;
     }
 
-    public void setLikedAbtCampus(String likedAbtCampus) {
-        this.likedAbtCampus = likedAbtCampus;
+    public void setIntinuni(String intinuni) {
+        this.intinuni = intinuni;
     }
 
-    public String getIntinUni() {
-        return intinUni;
+    public String getHighschlgradmonth() {
+        return highschlgradmonth;
     }
 
-    public void setIntinUni(String intinUni) {
-        this.intinUni = intinUni;
+    public void setHighschlgradmonth(String highschlgradmonth) {
+        this.highschlgradmonth = highschlgradmonth;
     }
 
-    public String getHighSchlGradMonth() {
-        return highSchlGradMonth;
+    public String getHighschlgradyear() {
+        return highschlgradyear;
     }
 
-    public void setHighSchlGradMonth(String highSchlGradMonth) {
-        this.highSchlGradMonth = highSchlGradMonth;
-    }
-
-    public String getHighSchlGradYear() {
-        return highSchlGradYear;
-    }
-
-    public void setHighSchlGradYear(String highSchlGradYear) {
-        this.highSchlGradYear = highSchlGradYear;
+    public void setHighschlgradyear(String highschlgradyear) {
+        this.highschlgradyear = highschlgradyear;
     }
 
     public String getRecos() {
@@ -188,13 +198,7 @@ public class Student {
         this.recos = recos;
     }
 
-    public String getComments() {
-        return comments;
-    }
 
-    public void setComments(String comments) {
-        this.comments = comments;
-    }
 
     public String getData() {
         return data;
@@ -207,24 +211,23 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "stdid='" + stdid + '\'' +
+                "stdId='" + stdId + '\'' +
                 ", username='" + username + '\'' +
                 ", street='" + street + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", zipCode='" + zipCode + '\'' +
+                ", zip='" + zip + '\'' +
                 ", telephone='" + telephone + '\'' +
                 ", email='" + email + '\'' +
                 ", url='" + url + '\'' +
-                ", surveyDate='" + surveyDate + '\'' +
-                ", likedAbtCampus='" + likedAbtCampus + '\'' +
-                ", intinUni='" + intinUni + '\'' +
-                ", highSchlGradMonth='" + highSchlGradMonth + '\'' +
-                ", highSchlGradYear='" + highSchlGradYear + '\'' +
+                ", sdate=" + sdate +
+                ", likedabtcampus='" + likedabtcampus + '\'' +
+                ", intinuni='" + intinuni + '\'' +
+                ", highschlgradmonth='" + highschlgradmonth + '\'' +
+                ", highschlgradyear='" + highschlgradyear + '\'' +
                 ", recos='" + recos + '\'' +
-                ", comments='" + comments + '\'' +
+                ", additionalcomments='" + additionalcomments + '\'' +
                 ", data='" + data + '\'' +
                 '}';
     }
-
 }

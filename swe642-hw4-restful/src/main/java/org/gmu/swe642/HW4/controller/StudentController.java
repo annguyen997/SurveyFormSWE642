@@ -18,11 +18,12 @@ public class StudentController {
 
     @GetMapping("/students/{stdid}")
     public Student studentInfo(@PathVariable String stdid) {
-        return studentRepo.findByStdid(stdid);
+        return studentRepo.findByStdId(stdid);
     }
 
     @PostMapping("/students")
     public Student studentInfo(@RequestBody Student student) {
+
         System.out.println(student);
         return studentRepo.save(student);
     }
