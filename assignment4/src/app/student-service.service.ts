@@ -1,4 +1,4 @@
-/* AUTHOR: Sai Risshie Makineni
+/* AUTHOR: Sai Risshie Makineni, Nupur Shah
     Student service to connect with beckend
 */
 import { Injectable } from '@angular/core';
