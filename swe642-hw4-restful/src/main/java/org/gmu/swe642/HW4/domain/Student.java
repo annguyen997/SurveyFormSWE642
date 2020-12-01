@@ -4,48 +4,76 @@ import javax.persistence.Entity;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 @Entity
-@Table(name = "STUDENTINFO")
+@Table(name = "students")
 public class Student {
 
     @Id
-    @Column(name = "STUDENTID")
-    private String studentId;
-    @Column(name = "USERNAME")
+    @Column(name = "STDID")
+    private String stdid; // student ID
+
+    @Column (name = "USERNAME")
     private String username;
-    @Column(name = "STREET")
+
+    @Column (name = "STREET")
     private String street;
-    @Column(name = "CITY")
+
+    @Column (name = "CITY")
     private String city;
-    @Column(name = "STATE")
+
+    @Column (name = "STATE")
     private String state;
+
     @Column (name = "ZIP")
     private String zipCode;
-    @Column(name = "TELEPHONE")
+
+    @Column (name = "TELEPHONE")
     private String telephone;
-    @Column(name = "EMAIL")
+
+    @Column (name = "EMAIL")
     private String email;
-    @Column(name = "URL")
+
+    @Column (name = "URL")
     private String url;
-    @Column (name = "DATEOFSURVEY")
-    private String surveyDate;
-    @Column (name = "GRADUATIONMONTH")
-    private String graduationMonth;
-    @Column (name = "GRADUATIONYEAR")
-    private String graduationYear;
+
+    @Column (name = "sdate")
+    private Date surveyDate;
+
+    @Column (name = "LIKEDABTCAMPUS")
+    private String likedAbtCampus;  	//Liked About Campus - Checkboxes
+    //There may be multiple options - need to split that.
+
+    @Column (name = "INTINUNI")
+    private String intinUni; 			//Interested Options - Radio Buttons
+
+    @Column (name = "HIGHSCHLGRADMONTH")
+    private String highSchlGradMonth;
+
+    @Column (name = "HIGHSCHLGRADYEAR")
+    private String highSchlGradYear;
+
+    @Column (name = "RECOS")
+    private String recos; 				//Recommend this school to other students
+
+    @Column (name = "COMMENTS")
+    private String comments; 			//Student comments
+
+    @Column (name = "DATA")
+    private String data; 				//List of integers
 
     //Empty constructor
     public Student() {
         super();
     }
 
-    public String getStudentId() {
-        return studentId;
+    public String getStdId() {
+        return stdid;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setStdId(String stdid) {
+        this.stdid = stdid;
     }
 
     public String getUsername() {
@@ -112,34 +140,74 @@ public class Student {
         this.url = url;
     }
 
-    public String getSurveyDate() {
+    public Date getSurveyDate() {
         return surveyDate;
     }
 
-    public void setSurveyDate(String surveyDate) {
+    public void setSurveyDate(Date surveyDate) {
         this.surveyDate = surveyDate;
     }
 
-    public String getGraduationMonth() {
-        return graduationMonth;
+    public String getLikedAbtCampus() {
+        return likedAbtCampus;
     }
 
-    public void setGraduationMonth(String graduationMonth) {
-        this.graduationMonth = graduationMonth;
+    public void setLikedAbtCampus(String likedAbtCampus) {
+        this.likedAbtCampus = likedAbtCampus;
     }
 
-    public String getGraduationYear() {
-        return graduationYear;
+    public String getIntinUni() {
+        return intinUni;
     }
 
-    public void setGraduationYear(String graduationYear) {
-        this.graduationYear = graduationYear;
+    public void setIntinUni(String intinUni) {
+        this.intinUni = intinUni;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    public String getHighSchlGradMonth() {
+        return highSchlGradMonth;
+    }
+
+    public void setHighSchlGradMonth(String highSchlGradMonth) {
+        this.highSchlGradMonth = highSchlGradMonth;
+    }
+
+    public String getHighSchlGradYear() {
+        return highSchlGradYear;
+    }
+
+    public void setHighSchlGradYear(String highSchlGradYear) {
+        this.highSchlGradYear = highSchlGradYear;
+    }
+
+    public String getRecos() {
+        return recos;
+    }
+
+    public void setRecos(String recos) {
+        this.recos = recos;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    @Override
+    public String toString() {
         return "Student{" +
-                "stdID='" + studentId + '\'' +
+                "stdid='" + stdid + '\'' +
                 ", username='" + username + '\'' +
                 ", street='" + street + '\'' +
                 ", city='" + city + '\'' +
@@ -149,8 +217,14 @@ public class Student {
                 ", email='" + email + '\'' +
                 ", url='" + url + '\'' +
                 ", surveyDate='" + surveyDate + '\'' +
-                ", graduationMonth='" + graduationMonth + '\'' +
-                ", graduationYear='" + graduationYear + '\'' +
+                ", likedAbtCampus='" + likedAbtCampus + '\'' +
+                ", intinUni='" + intinUni + '\'' +
+                ", highSchlGradMonth='" + highSchlGradMonth + '\'' +
+                ", highSchlGradYear='" + highSchlGradYear + '\'' +
+                ", recos='" + recos + '\'' +
+                ", comments='" + comments + '\'' +
+                ", data='" + data + '\'' +
                 '}';
     }
+
 }
