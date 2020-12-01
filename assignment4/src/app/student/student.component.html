@@ -19,7 +19,7 @@
 			</span>
 
 		<p><label for="stdid" class="required">Student ID: </label>
-			<input class="cs-input" type="text" name="stdid" id="stdid" formControlName="stdid" required mValidateOnBlur /></p>
+			<input class="cs-input" type="text" name="stdid" id="stdid" placeholder="Enter only numbers." formControlName="stdid" required mValidateOnBlur /></p>
 			<span *ngIf="stdid.invalid && (stdid.dirty || stdid.touched)" class="require">
 				<div *ngIf="stdid.errors.required">
 					Please enter Student id number.

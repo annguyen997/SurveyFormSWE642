@@ -26,26 +26,4 @@ export class StddetailsComponent implements OnInit {
       });
     });
   }
-  /* stdDet:Student;
-  stdid:string;
-  studentDetails:string[];
-  constructor(private myService:StudentServiceService,private route: ActivatedRoute) { }
-
-  ngOnInit(): void {
-    this.stdid = this.route.snapshot.paramMap.get('id');
-    console.log("id selected is "+this.stdid);
-    this.myService.getStdDetail(this.stdid).subscribe(
-      response=>{
-        return this.handleSuccessfulResponse(response);
-      }, 
-    );
-    console.log(this.stdDet);
-  }
-
-  handleSuccessfulResponse(response : any)
-  {
-      this.studentDetails=response;
-      console.log("student details from database using id retrieving is "+this.studentDetails);
-  } */
-
 }
