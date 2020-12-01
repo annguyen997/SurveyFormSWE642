@@ -1,3 +1,6 @@
+/* AUTHOR: Sai Risshie Makineni
+    Student service to connect with beckend
+*/
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Student } from './student.model';
