@@ -36,15 +36,16 @@ export class StudentServiceService {
   constructor(private http:HttpClient) { }
 
   getStdDetail(stdid: any){
-    return this.http.get<Student>('http://localhost:8080/students'+'/'+stdid, {withCredentials: true})
+    return this.http.get<Student>('http://localhost:8080/students'+'/'+stdid)
   }
  
   getStudents()
   {
-    return this.http.get<Student[]>('http://localhost:8080/students', {withCredentials: true});
+    return this.http.get<Student[]>('http://localhost:8080/students');
   }
 
   setStudent(student: Student){
-     return this.http.post('http://localhost:8080/students', student, {withCredentials: true});
+      const headers = {"Access-Control-Allow-Origin":"*"}
+     return this.http.post('http://localhost:8080/students', student, {headers});
   }
 }

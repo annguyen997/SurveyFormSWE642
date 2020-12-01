@@ -1,12 +1,11 @@
 <!-- AUTHOR: Nupur Shah
     Student details page
 -->
-<p *ngIf="student==null">Loading...</p>
 <table class="cs-container cs-table cs-content" *ngIf="student!=null">
     <caption class="cs-container cap-heading">Student Survey Records</caption>
     <tr>
         <td>Student ID</td>
-        <td>{{this?.student?.stdid}}</td>
+        <td>{{this?.student?.stdId}}</td>
     </tr>
     <tr>
         <td>Name</td>

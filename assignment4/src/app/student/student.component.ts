@@ -128,7 +128,7 @@ export class StudentComponent implements OnInit {
   console.log("likeliness"+this.scheduleForm.value.recos);
 
   this.studentDetails = {
-    stdid : this.scheduleForm.value.stdid,
+    stdId : this.scheduleForm.value.stdid,
     username : this.scheduleForm.value.username,
     street : this.scheduleForm.value.street,
     city : this.scheduleForm.value.city,
