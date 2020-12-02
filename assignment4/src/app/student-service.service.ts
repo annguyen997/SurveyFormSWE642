@@ -17,16 +17,16 @@ export class StudentServiceService {
   constructor(private http:HttpClient) { }
 
   getStdDetail(stdid: any){
-    return this.http.get<Student>('http://localhost:8080/students'+'/'+stdid)
+    return this.http.get<Student>('http://localhost:8080/HW4-0.0.1-SNAPSHOT/students/'+'/'+stdid)
   }
  
   getStudents()
   {
-    return this.http.get<Student[]>('http://localhost:8080/students');
+    return this.http.get<Student[]>('http://localhost:8080/HW4-0.0.1-SNAPSHOT/students/');
   }
 
   setStudent(student: Student){
       const headers = {"Access-Control-Allow-Origin":"*"}
-     return this.http.post('http://localhost:8080/students', student, {headers});
+     return this.http.post('http://localhost:8080/HW4-0.0.1-SNAPSHOT/students/', student, {headers});
   }
 }
